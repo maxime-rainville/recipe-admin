@@ -1,0 +1,13 @@
+---
+Name: recipe-adminroutes
+After:
+  - '#adminroutes'
+---
+SilverStripe\Control\Director:
+  rules:
+    admin: false
+    '': 'SilverStripe\Admin\AdminRootController'
+    'a': 'SilverStripe\Admin\AdminRootController'
+
+SilverStripe\Admin\AdminRootController:
+  url_base: 'a'

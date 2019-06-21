@@ -1,0 +1,49 @@
+###############################################################################
+# You can pre-defined default data for your project. This allows you to
+# quickly get started when setting a dev environment.
+###############################################################################
+
+Breed:
+  default_records:
+    - Name: Akita
+      AverageSize: medium
+    - Name: Husky
+      AverageSize: medium
+    - Name: Malamute
+      AverageSize: big
+    - Name: Bulldog
+      AverageSize: small
+    - Name: Staffordshire Terrier
+      AverageSize: medium
+    - Name: Rhodesian Ridgeback
+      AverageSize: medium
+
+Dog:
+  default_records:
+    - Name: Xena
+      Sex: Female
+      BreedID: 6
+    - Name: Fido
+      Sex: Male
+      BreedID: 1
+    - Name: Valkyrie
+      Sex: Female
+      BreedID: 2
+    - Name: Chinook
+      Sex: Male
+      BreedID: 2
+    - Name: Chimo
+      Sex: Female
+      BreedID: 3
+    - Name: Mr Alfred
+      Sex: Male
+      BreedID: 4
+
+###############################################################################
+# Sometimes, it's not practical to define the default records in YML. You can
+# apply an extension to specific DataObjects and implement the
+# `requireDefaultRecords` method to define complex relations.
+###############################################################################
+SilverStripe\Security\Group:
+  extensions:
+    - DefaultGroupExtension

@@ -1,0 +1,28 @@
+{
+    "name": "silverstripe/recipe-admin",
+    "description": "Starting point for a admin only SilverStripe project.",
+    "type": "silverstripe-recipe",
+    "require": {
+        "silverstripe/recipe-plugin": "^1.2.1",
+        "silverstripe/recipe-core": "^4.4.1",
+        "silverstripe/admin": "^1.4.1",
+        "silverstripe/reports": "^4.4.1",
+        "silverstripe/siteconfig": "^4.4.1",
+        "silverstripe/login-forms": "^1"
+    },
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Maxime Rainville",
+            "email": "maxime@silverstripe.com"
+        }
+    ],
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "extra": {
+        "project-files": [
+            "app/*"
+        ],
+        "resources-dir": "_resources"
+    }
+}
