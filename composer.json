@@ -21,8 +21,14 @@
     "minimum-stability": "dev",
     "extra": {
         "project-files": [
-            "app/*"
+            "app/*",
+            "public/*"
         ],
         "resources-dir": "_resources"
+    },
+    "suggest": {
+        "silverstripe/asset-admin": "Allows file management in your portal.",
+        "silverstripe/versioned": "Allows you to keep track of you model's change over time",
+        "silverstripe/versioned-admin": "Allows you to restored archived records"
     }
 }
