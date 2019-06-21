@@ -4,6 +4,13 @@ use SilverStripe\ORM\DataObject;
 use SilverStripe\Security\Permission;
 use SilverStripe\Security\PermissionProvider;
 
+
+/**
+ * Model to track a dog breed.
+ *
+ * @property string $Name
+ * @property string $Sex
+ */
 class Dog extends DataObject implements PermissionProvider {
 
     private static $table_name = 'Dog';
@@ -22,6 +29,10 @@ class Dog extends DataObject implements PermissionProvider {
         'Breed.Name' => 'Breed'
     ];
 
+    /**
+     * You can use this method to provide basic validation rules for your model.
+     * @return \SilverStripe\ORM\ValidationResult
+     */
     public function validate()
     {
         $results = parent::validate();
@@ -33,6 +44,10 @@ class Dog extends DataObject implements PermissionProvider {
         return $results;
     }
 
+    /**
+     * Provide permission related to managing this model.
+     * @return array
+     */
     public function providePermissions()
     {
         $category = DogAdmin::menu_title();

@@ -4,12 +4,22 @@ use SilverStripe\ORM\DataObject;
 use SilverStripe\Security\Permission;
 use SilverStripe\Security\PermissionProvider;
 
+/**
+ * Model to track a dog breed.
+ *
+ * @property string $Name
+ * @property DataList|Dog[] $Dogs
+ */
 class Breed extends DataObject implements PermissionProvider {
 
     private static $table_name = 'Breed';
 
     private static $summary_fields = [
         'Name' => 'Dog Breed'
+    ];
+
+    private static $has_many = [
+        'Dogs' => Dog::class
     ];
 
     private static $db = [
