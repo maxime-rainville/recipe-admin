@@ -11,3 +11,4 @@ SilverStripe\Control\Director:
 
 SilverStripe\Admin\AdminRootController:
   url_base: 'a'
+  default_panel: DogAdmin
