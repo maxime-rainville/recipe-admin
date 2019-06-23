@@ -1,5 +1,2 @@
 .env
 vendor
-public
-.idea
-composer.lock

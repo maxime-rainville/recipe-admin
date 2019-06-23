@@ -1,3 +1,4 @@
+# Make AdminRootController the root controller for the application so people
 ---
 Name: recipe-adminroutes
 After:
@@ -9,6 +10,7 @@ SilverStripe\Control\Director:
     '': 'SilverStripe\Admin\AdminRootController'
     'a': 'SilverStripe\Admin\AdminRootController'
 
+# Set the default area in the MOdel
 SilverStripe\Admin\AdminRootController:
   url_base: 'a'
   default_panel: DogAdmin
