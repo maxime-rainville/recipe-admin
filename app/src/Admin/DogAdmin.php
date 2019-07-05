@@ -2,6 +2,9 @@
 
 use SilverStripe\Admin\ModelAdmin;
 
+/**
+ * Simple ModelAdmin to manage dogs and breeds.
+ */
 class DogAdmin extends ModelAdmin {
 
     private static $managed_models = [

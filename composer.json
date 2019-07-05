@@ -1,5 +1,5 @@
 {
-    "name": "silverstripe/recipe-admin",
+    "name": "maxime-rainville/recipe-admin",
     "description": "Starting point for a admin only SilverStripe project.",
     "type": "silverstripe-recipe",
     "require": {
@@ -8,7 +8,7 @@
         "silverstripe/admin": "^1.4.1",
         "silverstripe/reports": "^4.4.1",
         "silverstripe/siteconfig": "^4.4.1",
-        "silverstripe/login-forms": "^1"
+        "silverstripe/login-forms": "^4.0.0-beta1"
     },
     "license": "BSD-3-Clause",
     "authors": [

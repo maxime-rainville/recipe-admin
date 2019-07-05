@@ -10,6 +10,9 @@ use SilverStripe\Reports\Report;
 use SilverStripe\ORM\DB;
 use SilverStripe\Versioned\Versioned;
 
+/**
+ * Simple report counting the number of dogs for each breed.
+ */
 class BreedReport extends Report
 {
 

@@ -4,28 +4,13 @@ use SilverStripe\ORM\DataExtension;
 use SilverStripe\Security\Group;
 use SilverStripe\Security\Permission;
 
+/**
+ * Apply this extension to Group to add the ability to define default groups with pre-defined permissions.
+ */
 class DefaultGroupExtension extends DataExtension
 {
 
-    private static $default_groups = [
-        [
-            'Title' => 'Dog Managers',
-            'Description' => 'Can administer dogs.',
-            'Permissions' => ['DOG_EDIT', 'DOG_VIEW', 'BREED_VIEW', 'CMS_ACCESS_DogAdmin']
-        ],
-        [
-            'Title' => 'Breed Managers',
-            'Description' => 'Can administer dogs and dog breeds.',
-            'Permissions' => [
-                'BREED_EDIT',
-                'BREED_VIEW',
-                'DOG_EDIT',
-                'DOG_VIEW',
-                'CMS_ACCESS_DogAdmin',
-                'CMS_ACCESS_ReportAdmin'
-            ]
-        ]
-    ];
+    private static $default_groups = [];
 
     public function requireDefaultRecords()
     {

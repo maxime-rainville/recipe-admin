@@ -10,7 +10,7 @@ SilverStripe\Control\Director:
     '': 'SilverStripe\Admin\AdminRootController'
     'a': 'SilverStripe\Admin\AdminRootController'
 
-# Set the default area in the MOdel
+# Set the default panel in the administration area
 SilverStripe\Admin\AdminRootController:
   url_base: 'a'
   default_panel: DogAdmin
