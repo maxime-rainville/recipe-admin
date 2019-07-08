@@ -9,6 +9,9 @@
 * Showcase how to set up default groups,
 * Showcase a generic report.
 
+![Screen shot of recipe-admin](/docs/screenshot.png "Screen shot of recipe-admin")
+
+
 [View a short video of a recipe-admin project](https://youtu.be/J-H9SbvNQFo) 
 
 
