@@ -25,8 +25,7 @@ jobs:
     - name: Install composer dependencies
       shell: powershell
       run: composer validate
-        composer require silverstripe/recipe-testing:^1 silverstripe/recipe-core:4.4.x-dev silverstripe/versioned:1.4.x-dev --no-update
-        composer install --prefer-source --no-interaction --no-progress --no-suggest --optimize-autoloader --verbose --profile
+      
     - shell: powershell
       run: composer require silverstripe/recipe-testing:^1 silverstripe/recipe-core:4.4.x-dev silverstripe/versioned:1.4.x-dev --no-update
     - shell: powershell
