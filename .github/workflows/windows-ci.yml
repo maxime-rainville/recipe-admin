@@ -10,8 +10,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     
-    - name: say hello
-      run: echo Hello
+    - name: Installing PHP
+      uses: shivammathur/setup-php@master
+      with:
+        php-version: 7.3
+        extension-csv: mbstring, xdebug
     
     - name: Install composer dependencies
       run: |
