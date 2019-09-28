@@ -32,4 +32,4 @@ jobs:
       shell: powershell
 
     - name: Run tests
-      run: php7.3 vendor/bin/phpunit vendor/silverstripe/admin/tests/php
+      run: vendor/bin/phpunit vendor/silverstripe/admin/tests/php
