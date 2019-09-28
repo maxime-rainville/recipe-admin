@@ -24,15 +24,10 @@ jobs:
     
     - name: Install composer dependencies
       shell: powershell
-      run: composer validate
-      
-    - shell: powershell
-      run: composer require silverstripe/recipe-testing:1.x-dev silverstripe/recipe-core:4.4.x-dev silverstripe/versioned:1.4.x-dev --no-update
-    - shell: powershell
-      run: composer install --prefer-source --no-interaction --no-progress --no-suggest --optimize-autoloader --verbose --profile
-        
-    - name: Print composer package list
-      run: composer show
-     
-#      - name: Run tests
-#        run: php7.3 vendor/bin/phpunit vendor/silverstripe/admin/tests/php
+      run: |
+        composer validate
+        composer require silverstripe/recipe-testing:1.x-dev silverstripe/recipe-core:4.4.x-dev silverstripe/versioned:1.4.x-dev --no-update --quiet
+        composer install --prefer-source --no-interaction --no-progress --no-suggest --optimize-autoloader --verbose --profile     
+
+    - name: Run tests
+      run: php7.3 vendor/bin/phpunit vendor/silverstripe/admin/tests/php
