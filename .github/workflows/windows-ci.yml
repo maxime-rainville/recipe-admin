@@ -26,8 +26,8 @@ jobs:
       shell: powershell
       run: |
         composer validate
-        composer require silverstripe/recipe-testing:^1 silverstripe/recipe-core:4.4.x-dev silverstripe/versioned:1.4.x-dev --no-update
-        composer install --prefer-source --no-interaction --no-progress --no-suggest --optimize-autoloader --verbose --profile
+        composer require silverstripe/recipe-testing:^1 silverstripe/recipe-core:4.4.x-dev silverstripe/versioned:1.4.x-dev --no-update 2>&1
+        composer install --prefer-source --no-interaction --no-progress --no-suggest --optimize-autoloader --verbose --profile 2>&1
         
     - name: Print composer package list
       run: composer show
