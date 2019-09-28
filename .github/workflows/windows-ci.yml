@@ -10,12 +10,15 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     
-    - name: Install composer dependencies
-      run: |
-        composer validate
-        composer require silverstripe/recipe-testing:^1 silverstripe/recipe-core:4.4.x-dev silverstripe/versioned:1.4.x-dev --no-update
-        composer install --prefer-source --no-interaction --no-progress --no-suggest --optimize-autoloader --verbose --profile
-        composer show
+    - name: say hello
+      run: echo Hello
+    
+#     - name: Install composer dependencies
+#       run: |
+#         composer validate
+#         composer require silverstripe/recipe-testing:^1 silverstripe/recipe-core:4.4.x-dev silverstripe/versioned:1.4.x-dev --no-update
+#         composer install --prefer-source --no-interaction --no-progress --no-suggest --optimize-autoloader --verbose --profile
+#         composer show
      
-     - name: Run tests
-       run: php7.3 vendor/bin/phpunit vendor/silverstripe/admin/tests/php
+#      - name: Run tests
+#        run: php7.3 vendor/bin/phpunit vendor/silverstripe/admin/tests/php
