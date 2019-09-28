@@ -27,7 +27,9 @@ jobs:
       run: |
         composer validate
         composer require silverstripe/recipe-testing:1.x-dev silverstripe/recipe-core:4.4.x-dev silverstripe/versioned:1.4.x-dev --no-update --quiet
-        composer install --prefer-source --no-interaction --no-progress --no-suggest --optimize-autoloader --verbose --profile     
+        
+    - run: composer install --prefer-source --no-interaction --no-progress --no-suggest --optimize-autoloader --verbose --profile
+      shell: powershell
 
     - name: Run tests
       run: php7.3 vendor/bin/phpunit vendor/silverstripe/admin/tests/php
