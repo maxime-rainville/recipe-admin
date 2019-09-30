@@ -10,11 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     
-    - uses: mirromutth/mysql-action@v1.1
-      with:
-        mysql root password: ""
-        
-    
     - name: Installing PHP
       uses: shivammathur/setup-php@master
       with:
@@ -38,3 +33,9 @@ jobs:
 
     - name: Run tests
       run: vendor/bin/phpunit vendor/silverstripe/admin/tests/php
+      env:
+        SS_DATABASE_CLASS: MySQLDatabase
+        SS_DATABASE_USERNAME: root
+        SS_DATABASE_PASSWORD: root
+        SS_DATABASE_CHOOSE_NAME: true
+        SS_DATABASE_SERVER: "127.0.0.1"
