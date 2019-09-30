@@ -10,6 +10,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     
+    - uses: mirromutth/mysql-action@v1.1
+      with:
+        mysql root password: ""
+        
+    
     - name: Installing PHP
       uses: shivammathur/setup-php@master
       with:
