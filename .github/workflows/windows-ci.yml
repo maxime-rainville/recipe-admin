@@ -1,0 +1,52 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    services:
+      mysql:
+        image: "mysql:5.7"
+        env:
+          MYSQL_ROOT_PASSWORD: password
+        ports:
+        - 3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+    steps:
+    - name: Verify MySQL connection from host
+      run: mysql --host 127.0.0.1 -uroot -ppassword -e "SHOW DATABASES"
+    
+#     steps:
+#     - uses: actions/checkout@v1
+    
+#     - name: Installing PHP
+#       uses: shivammathur/setup-php@master
+#       with:
+#         php-version: 7.3
+#         extension-csv: mbstring, xdebug, intl, fileinfo, mysqli, pdo, pdo_mysql
+        
+#     - name: versions of everything
+#       shell: powershell
+#       run: |
+#         composer -V
+#         php -v
+    
+#     - name: Install composer dependencies
+#       shell: powershell
+#       run: |
+#         composer validate
+#         composer require silverstripe/recipe-testing:1.x-dev silverstripe/recipe-core:4.4.x-dev silverstripe/versioned:1.4.x-dev --no-update --quiet
+        
+#     - run: composer install --prefer-source --no-interaction --no-progress --no-suggest --optimize-autoloader --verbose --profile
+#       shell: powershell
+
+#     - name: Run tests
+#       run: vendor/bin/phpunit vendor/silverstripe/admin/tests/php
+# #       env:
+# #         SS_DATABASE_CLASS: MySQLDatabase
+# #         SS_DATABASE_USERNAME: root
+# #         SS_DATABASE_PASSWORD: root
+# #         SS_DATABASE_CHOOSE_NAME: true
+# #         SS_DATABASE_SERVER: "127.0.0.1"
