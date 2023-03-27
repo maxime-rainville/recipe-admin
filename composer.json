@@ -3,12 +3,12 @@
     "description": "Starting point for a admin only SilverStripe project.",
     "type": "silverstripe-recipe",
     "require": {
-        "silverstripe/recipe-plugin": "^1.2.1",
-        "silverstripe/recipe-core": "^4.4.1",
-        "silverstripe/admin": "^1.4.1",
-        "silverstripe/reports": "^4.4.1",
-        "silverstripe/siteconfig": "^4.4.1",
-        "silverstripe/login-forms": "^4.0.0-beta1"
+        "silverstripe/recipe-plugin": "^2",
+        "silverstripe/recipe-core": "^5",
+        "silverstripe/admin": "^2",
+        "silverstripe/reports": "^5",
+        "silverstripe/siteconfig": "^5",
+        "silverstripe/login-forms": "^5"
     },
     "license": "BSD-3-Clause",
     "authors": [
